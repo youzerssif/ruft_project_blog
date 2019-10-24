@@ -102,4 +102,22 @@
                 return self.nom
 
 
+        class Appreciation(models.Model):
+             """Model definition for Appreciation."""
+
+            like = models.BooleanField(default=False)
+            dislike = models.BooleanField(default=False)
+            article = models.ForeignKey(Article,on_delete= models.CASCADE, related_name="article_like")
+            date_add =  models.DateTimeField(auto_now_add=True)
+            date_update =  models.DateTimeField(auto_now=True)
+            status =  models.BooleanField(default=True)
+
+             class Meta:
+                 """Meta definition for Appreciation."""
+
+                 verbose_name = 'Appreciation'
+                 verbose_name_plural = 'Appreciations'
+ 
+
+
 ```
