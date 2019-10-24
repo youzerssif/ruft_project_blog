@@ -161,3 +161,33 @@
                 verbose_name_plural = 'Souscriptions'
 
 ```
+
+## application Config
+
+```python
+                
+        class Ruft(models.Model):
+            """Model definition for Ruft."""
+
+            logo = models.ImageField(upload_to='logo_ruft')
+            adresse = models.CharField(max_length=150)
+            telephone = models.PositiveIntegerField()
+            email = models.EmailField(max_length=254)
+            facebook  = models.URLField(max_length=200)
+            instagram = models.URLField(max_length=200)
+            twitter = models.URLField(max_length=200)
+            active = models.BooleanField(default=False)
+            date_add = models.DateTimeField(auto_now_add=True)
+            date_udp =  models.DateTimeField(auto_now =True)
+
+            class Meta:
+                """Meta definition for Ruft."""
+
+                verbose_name = 'Ruft'
+                verbose_name_plural = 'Rufts'
+
+            def __str__(self):
+                """Unicode representation of Ruft."""
+                pass
+
+```
