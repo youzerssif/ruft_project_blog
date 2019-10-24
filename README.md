@@ -1,5 +1,7 @@
 # ruft_project_blog
 
+## Appllications : blog, contact, config, member, visitor, statistique
+
 ## Models de l application Blog
 ```python
         from django.db import models
