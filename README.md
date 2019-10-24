@@ -186,8 +186,19 @@
                 verbose_name = 'Ruft'
                 verbose_name_plural = 'Rufts'
 
-            def __str__(self):
-                """Unicode representation of Ruft."""
-                pass
+
+         class Map(models.Model):
+            """Model definition for Map."""
+
+            lien = models.URLField(max_length=200)
+            active = models.BooleanField(default=False)
+            date_add = models.DateTimeField(auto_now_add=True)
+            date_udp =  models.DateTimeField(auto_now =True)
+
+            class Meta:
+                """Meta definition for Map."""
+
+                verbose_name = 'Map'
+                verbose_name_plural = 'Maps'
 
 ```
