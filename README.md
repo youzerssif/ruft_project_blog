@@ -1,0 +1,1 @@
+# ruft_project_blog
